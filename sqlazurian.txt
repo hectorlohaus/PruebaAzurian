@@ -1,0 +1,24 @@
+create table product (
+        id bigint not null auto_increment,
+        description varchar(255),
+        name varchar(255),
+        price float(23),
+        primary key (id)
+    ) engine=InnoDB
+
+INSERT INTO `product` VALUES (1,'peluche1','peluche1',5000),
+(2,'peluche2','peluche2',7000),
+(3,'peluche3','peluche3',9000),
+(4,'peluche4','peluche4',11000),
+(5,'peluche5','peluche5',1000),
+(6,'peluche6','peluche6',4000),
+(7,'peluche7','peluche7',90000),
+(8,'peluche8','peluche8',35000),
+(9,'figura1','figura1',7580),
+(10,'figura2','figura2',8947),
+(11,'figura3','figura3',15641),
+(12,'figura4','figura4',4892),
+(13,'figura6','figura6',17865),
+(14,'figura7','figura7',14785),
+(15,'figura8','figura8',147848),
+(16,'figura9','figura9',14748);

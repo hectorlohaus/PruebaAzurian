@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ProductService} from "./service/product.service";
+import {Observable} from "rxjs";
+
 
 @Component({
   selector: 'app-root',
@@ -7,8 +9,11 @@ import {ProductService} from "./service/product.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'webAzurian';
   data=[] as any;
+  pages=1;
+
 
   constructor(private product:ProductService) {
     this.product.getData().subscribe(data=>{
@@ -16,4 +21,8 @@ export class AppComponent {
       this.data=data;
     })
   }
+
 }
+
+
+

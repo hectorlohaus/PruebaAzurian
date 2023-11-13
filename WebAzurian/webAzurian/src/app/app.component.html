@@ -5,12 +5,17 @@
     <td>description</td>
     <td>price</td>
   </tr>
-  <tr *ngFor="let item of data">
+
+
+  <tr *ngFor="let item of data | paginate:{itemsPerPage:5,currentPage:pages}">
     <td>{{item.id}}</td>
     <td>{{item.name}}</td>
     <td>{{item.description}}</td>
     <td>{{item.price}}</td>
   </tr>
-</table>
 
+</table>
+<pagination-controls (pageChange)="pages=$event">
+
+</pagination-controls>
 <router-outlet></router-outlet>

@@ -6,9 +6,12 @@ import {HttpClient} from "@angular/common/http";
 })
 export class ProductService {
 
-  constructor(private http:HttpClient) { }
-  getData(){
-    let url="https://pruebaazurian.up.railway.app/products"
+  constructor(private http: HttpClient) {
+  }
+
+  getData() {
+    let url = `https://pruebaazurian.up.railway.app/products`
     return this.http.get(url);
   }
+
 }
